@@ -13,22 +13,23 @@ import Link from "next/link";
 import FormControl from 'react-bootstrap/FormControl'
 import Card from 'react-bootstrap/Card'
 import Carousel from 'react-bootstrap/Carousel'  
-import slide1 from '../public/a8.webp';
-import slide2 from '../public/etron.webp';
-import slide3 from '../public/lexus.webp';
-import slide5 from '../public/urus.webp';
-import slide4 from '../public/rs7.webp';
+import bgi1 from '../public/bgi1.jpg';
+import slide2 from '../public/bg12.jpg';
+import slide3 from '../public/bgi3.jpg';
+import slide5 from '../public/bgi4.jpg';
+import slide4 from '../public/bgi4.webp';
 
 
 const Index = (props) => {
   const vehicles = props.data;
 
   return (
-      <Container>
+      <>
 
-<Navbar bg="light" expand="lg">
-    <Container fluid>
-    <Navbar.Brand href="#">GetCar.com</Navbar.Brand>
+<Navbar style={{backgroundColor:"red"}}  expand="lg">
+    <Container  fluid>
+    <Navbar.Brand href="#">CarDekho</Navbar.Brand>
+   
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
       <Nav
@@ -37,8 +38,8 @@ const Index = (props) => {
         navbarScroll
       >
         <Nav.Link href="/">Home</Nav.Link>
-        <Nav.Link href="/1">Product</Nav.Link>
-        
+        <Nav.Link href="/1">Products</Nav.Link>
+       
       </Nav>
       <Form className="d-flex">
         <FormControl
@@ -55,16 +56,16 @@ const Index = (props) => {
   </Container>
 </Navbar>
 
-<Carousel fade className="mt-6">
+<Carousel fade className="mt-0">
   <Carousel.Item>
     <Image
       className="d-block w-100"
-      src={slide1}
+      src={bgi1}
       alt="First slide"
     />
     <Carousel.Caption>
-      <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      <h3>Welcome to car dekho</h3>
+      <p>CarBike360 is one of the best car and bike searching platforms, which helps people to search for car and bikes online according to their needs and budget..</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -75,8 +76,8 @@ const Index = (props) => {
     />
 
     <Carousel.Caption>
-      <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <h3>Welcome to car dekho</h3>
+      <p>CarBike360 is one of the best car and bike searching platforms, which helps people to search for car and bikes online according to their needs and budget..</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -87,8 +88,8 @@ const Index = (props) => {
     />
 
     <Carousel.Caption>
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    <h3>Welcome to car dekho</h3>
+      <p>CarBike360 is one of the best car and bike searching platforms, which helps people to search for car and bikes online according to their needs and budget..</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -99,8 +100,8 @@ const Index = (props) => {
     />
 
     <Carousel.Caption>
-      <h3>Fourth slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    <h3>Welcome to car dekho</h3>
+      <p>CarBike360 is one of the best car and bike searching platforms, which helps people to search for car and bikes online according to their needs and budget..</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -111,8 +112,8 @@ const Index = (props) => {
     />
 
     <Carousel.Caption>
-      <h3>fifth slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    <h3>Welcome to car dekho</h3>
+      <p>CarBike360 is one of the best car and bike searching platforms, which helps people to search for car and bikes online according to their needs and budget..</p>
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
@@ -123,15 +124,15 @@ const Index = (props) => {
 
    
     {vehicles.map((vehicle) => (
-   <Col>
-        <Card className="my-6" key={vehicle.id}>
+   <Col style={{textAlign:"center"}}>
+        <Card  className="my-6" key={vehicle.id}>
           <div className="img-box">
             <Image variant="top"   width={400} height={200} layout="responsive"  src={vehicle.Image} alt="" title="" />
           </div>
       
       <Card.Body>
-        <Card.Title>{vehicle.Name}</Card.Title>
-        <Card.Text>
+        <Card.Title style={{color:"oink"}}>{vehicle.Name}</Card.Title>
+        <Card.Text >
         {vehicle.Price}
         </Card.Text>
         <Link
@@ -140,7 +141,7 @@ const Index = (props) => {
                 query: { id: vehicle.id },
               }}
             >
-               <Button variant="primary">Go somewhere</Button>
+               <Button style={{color:"black" , backgroundColor:"red"}}>Diwali Offer</Button>
               
             </Link>
        
@@ -151,20 +152,11 @@ const Index = (props) => {
   </Row>
 </div>
 
-<footer>
-         <a
-           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-           target="_blank"
-           rel="noopener noreferrer"
-         >
-          
-         </a>
-</footer>
-      </Container>
+
+      </>
   
   );
 };
-
 export default Index;
 
 export const getStaticProps = async () => {
