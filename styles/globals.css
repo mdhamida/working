@@ -1,0 +1,46 @@
+/* ./styles/globals.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.carousel-item span {
+  width: 100%!important;
+}
+.carousel-item{
+  width:100%;
+  height:400px!important;
+}
+
+.popular .col{
+  min-width:33%!important;
+}
+.iconsvg {
+  max-height: 100%;
+  height: 50px!important;
+  width: 50px!important;
+  max-width: 50px!important;
+  min-width: 50px!important;
+  min-height: 50px!important;
+}
+.iconsvg span{
+  width: 100% !important;;
+  height: 100% !important;;
+}
