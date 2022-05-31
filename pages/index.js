@@ -38,7 +38,7 @@ const Index = (props) => {
         navbarScroll
       >
         <Nav.Link href="/">Home</Nav.Link>
-        <Nav.Link href="/1">Products</Nav.Link>
+        <Nav.Link href="/1">Cars</Nav.Link>
        
       </Nav>
       <Form className="d-flex">
